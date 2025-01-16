@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>袨斜蟹芯褉 袠袠 懈薪褋褌褉褍屑械薪褌芯胁</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        :root {
+            --bg-gradient-light: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --bg-gradient-dark: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+            --card-bg-light: rgba(255, 255, 255, 0.9);
+            --card-bg-dark: rgba(30, 30, 30, 0.9);
+            --text-primary-light: #2c3e50;
+            --text-primary-dark: #ffffff;
+            --text-secondary-light: #7f8c8d;
+            --text-secondary-dark: #a0a0a0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        body.light-theme {
+            background: var(--bg-gradient-light);
+            color: var(--text-primary-light);
+        }
+
+        body.dark-theme {
+            background: var(--bg-gradient-dark);
+            color: var(--text-primary-dark);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .controls {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            display: flex;
+            gap: 1rem;
+            z-index: 1000;
+        }
+
+        .control-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2c3e50;
+            transition: all 0.3s ease;
+        }
+
+        .dark-theme .control-btn {
+            background: rgba(30, 30, 30, 0.9);
+            color: #ffffff;
+        }
+
+        .control-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .light-theme header {
+            background: var(--card-bg-light);
+        }
+
+        .dark-theme header {
+            background: var(--card-bg-dark);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            border-radius: 15px;
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .light-theme .card {
+            background: var(--card-bg-light);
+        }
+
+        .dark-theme .card {
+            background: var(--card-bg-dark);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .card a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .dark-theme .card a {
+            color: #5dade2;
+        }
+
+        .card a:hover {
+            color: #2980b9;
+        }
+
+        .advantages {
+            margin-top: 1rem;
+        }
+
+        .advantages ul {
+            list-style-position: inside;
+        }
+
+        .light-theme .advantages ul {
+            color: var(--text-secondary-light);
+        }
+
+        .dark-theme .advantages ul {
+            color: var(--text-secondary-dark);
+        }
+
+        .advantages li {
+            margin-bottom: 0.5rem;
+        }
+
+        .category {
+            font-size: 0.9rem;
+            color: #e74c3c;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+
+            .controls {
+                position: static;
+                margin-bottom: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body class="light-theme">
+    <div class="controls">
+        <button class="control-btn" onclick="toggleLanguage()" id="langToggle">EN</button>
+        <button class="control-btn" onclick="toggleTheme()" id="themeToggle">馃寵</button>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>袦邪褉泻 袚褍屑薪懈褑泻懈泄 小械褉谐械械胁懈褔</h1>
+            <h2 class="catalog-title">袣邪褌邪谢芯谐 褋芯胁褉械屑械薪薪褘褏 袠袠-懈薪褋褌褉褍屑械薪褌芯胁</h2>
+        </header>
+
+        <div class="grid">
+            <div class="card">
+                <span class="category" data-ru="袚械薪械褉邪褑懈褟 褌械泻褋褌邪" data-en="Text Generation">袚械薪械褉邪褑懈褟 褌械泻褋褌邪</span>
+                <img src="https://1000logos.net/wp-content/uploads/2023/02/ChatGPT-Logo.png" alt="ChatGPT">
+                <h3>ChatGPT</h3>
+                <a href="https://chat.openai.com" target="_blank" data-ru="袨褌泻褉褘褌褜 褋邪泄褌 鈫�" data-en="Open website 鈫�">袨褌泻褉褘褌褜 褋邪泄褌 鈫�</a>
+                <div class="advantages">
+                    <ul>
+                        <li data-ru="袩褉芯写胁懈薪褍褌邪褟 谐械薪械褉邪褑懈褟 褌械泻褋褌邪" data-en="Advanced text generation">袩褉芯写胁懈薪褍褌邪褟 谐械薪械褉邪褑懈褟 褌械泻褋褌邪</li>
+                        <li data-ru="袦褍谢褜褌懈褟蟹褘褔薪邪褟 锌芯写写械褉卸泻邪" data-en="Multilingual support">袦褍谢褜褌懈褟蟹褘褔薪邪褟 锌芯写写械褉卸泻邪</li>
+                        <li data-ru="袣芯薪褌械泻褋褌薪芯械 芯斜褖械薪懈械" data-en="Contextual communication">袣芯薪褌械泻褋褌薪芯械 芯斜褖械薪懈械</li>
+                        <li data-ru="袩芯屑芯褖褜 胁 薪邪锌懈褋邪薪懈懈 泻芯写邪" data-en="Code writing assistance">袩芯屑芯褖褜 胁 薪邪锌懈褋邪薪懈懈 泻芯写邪</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="category" data-ru="小芯蟹写邪薪懈械 懈蟹芯斜褉邪卸械薪懈泄" data-en="Image Creation">小芯蟹写邪薪懈械 懈蟹芯斜褉邪卸械薪懈泄</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png" alt="Midjourney">
+                <h3>Midjourney</h3>
+                <a href="https://www.midjourney.com" target="_blank" data-ru="袨褌泻褉褘褌褜 褋邪泄褌 鈫�" data-en="Open website 鈫�">袨褌泻褉褘褌褜 褋邪泄褌 鈫�</a>
+                <div class="advantages">
+                    <ul>
+                        <li data-ru="袪械邪谢懈褋褌懈褔薪褘械 懈蟹芯斜褉邪卸械薪懈褟" data-en="Realistic images">袪械邪谢懈褋褌懈褔薪褘械 懈蟹芯斜褉邪卸械薪懈褟</li>
+                        <li data-ru="校薪懈泻邪谢褜薪褘泄 褋褌懈谢褜" data-en="Unique style">校薪懈泻邪谢褜薪褘泄 褋褌懈谢褜</li>
+                        <li data-ru="袠薪褌褍懈褌懈胁薪褘泄 懈薪褌械褉褎械泄褋" data-en="Intuitive interface">袠薪褌褍懈褌懈胁薪褘泄 懈薪褌械褉褎械泄褋</li>
+                        <li data-ru="袘褘褋褌褉邪褟 芯斜褉邪斜芯褌泻邪" data-en="Fast processing">袘褘褋褌褉邪褟 芯斜褉邪斜芯褌泻邪</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="category" data-ru="袨斜褉邪斜芯褌泻邪 胁懈写械芯" data-en="Video Processing">袨斜褉邪斜芯褌泻邪 胁懈写械芯</span>
+                <img src="https://digiseller.mycdn.ink/preview/218823/p1_4134871_3bd253a4.png" alt="Runway">
+                <h3>Runway</h3>
+                <a href="https://runway.ml" target="_blank" data-ru="袨褌泻褉褘褌褜 褋邪泄褌 鈫�" data-en="Open website 鈫�">袨褌泻褉褘褌褜 褋邪泄褌 鈫�</a>
+                <div class="advantages">
+                    <ul>
+                        <li data-ru="袠袠-屑芯薪褌邪卸 胁懈写械芯" data-en="AI video editing">袠袠-屑芯薪褌邪卸 胁懈写械芯</li>
+                        <li data-ru="小锌械褑褝褎褎械泻褌褘" data-en="Special effects">小锌械褑褝褎褎械泻褌褘</li>
+                        <li data-ru="袚械薪械褉邪褑懈褟 胁懈写械芯" data-en="Video generation">袚械薪械褉邪褑懈褟 胁懈写械芯</li>
+                        <li data-ru="校屑薪芯械 褉械写邪泻褌懈褉芯胁邪薪懈械" data-en="Smart editing">校屑薪芯械 褉械写邪泻褌懈褉芯胁邪薪懈械</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="category" data-ru="袪邪蟹褉邪斜芯褌泻邪" data-en="Development">袪邪蟹褉邪斜芯褌泻邪</span>
+                <img src="https://edgestatic.azureedge.net/shared/cms/lrs1c69a1j/logos/9759dc3bced042989f176efa44fc0fa0.png" alt="GitHub Copilot">
+                <h3>GitHub Copilot</h3>
+                <a href="https://github.com/features/copilot" target="_blank" data-ru="袨褌泻褉褘褌褜 褋邪泄褌 鈫�" data-en="Open website">袨褌泻褉褘褌褜 褋邪泄褌 鈫�</a>
+                <div class="advantages">
+                    <ul>
+                        <li data-ru="袠袠-邪胁褌芯写芯锌芯谢薪械薪懈械 泻芯写邪" data-en="AI code completion">袠袠-邪胁褌芯写芯锌芯谢薪械薪懈械 泻芯写邪</li>
+                        <li data-ru="袩芯写写械褉卸泻邪 胁褋械褏 褟蟹褘泻芯胁" data-en="All languages support">袩芯写写械褉卸泻邪 胁褋械褏 褟蟹褘泻芯胁</li>
+                        <li data-ru="袙褋褌褉芯械薪 胁 锌芯锌褍谢褟褉薪褘械 IDE" data-en="Integrated with popular IDEs">袙褋褌褉芯械薪 胁 锌芯锌褍谢褟褉薪褘械 IDE</li>
+                        <li data-ru="袛芯泻褍屑械薪褌懈褉芯胁邪薪懈械 泻芯写邪" data-en="Code documentation">袛芯泻褍屑械薪褌懈褉芯胁邪薪懈械 泻芯写邪</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let isRussian = true;
+        let isDark = false;
+
+        function toggleLanguage() {
+            isRussian = !isRussian;
+            const langBtn = document.getElementById('langToggle');
+            langBtn.textContent = isRussian ? 'EN' : 'RU';
+
+            // Update catalog title
+            document.querySelector('.catalog-title').textContent = isRussian 
+                ? '袣邪褌邪谢芯谐 褋芯胁褉械屑械薪薪褘褏 袠袠-懈薪褋褌褉褍屑械薪褌芯胁'
+                : 'Catalog of Modern AI Tools';
+
+            // Update all elements with data-ru and data-en attributes
+            document.querySelectorAll('[data-ru][data-en]').forEach(element => {
+                element.textContent = isRussian ? element.dataset.ru : element.dataset.en;
+            });
+        }
+
+        function toggleTheme() {
+            isDark = !isDark;
+            const themeBtn = document.getElementById('themeToggle');
+            document.body.classList.toggle('dark-theme');
+            document.body.classList.toggle('light-theme');
+            themeBtn.textContent = isDark ? '鈽�锔�' : '馃寵';
+        }
+    </script>
+</body>
+                          </html>
