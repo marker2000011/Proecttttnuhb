@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>袨斜蟹芯褉 袠袠 懈薪褋褌褉褍屑械薪褌芯胁</title>
+    <title>Каталог инструментов ИИ</title>
     <style>
         * {
             margin: 0;
@@ -11,16 +11,20 @@
             box-sizing: border-box;
             transition: background-color 0.3s, color 0.3s;
         }
-        
+
         :root {
             --bg-gradient-light: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             --bg-gradient-dark: linear-gradient(135deg, #2c3e50 0%, #1a1a1a 100%);
+            --bg-gradient-blue: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
             --card-bg-light: rgba(255, 255, 255, 0.9);
             --card-bg-dark: rgba(30, 30, 30, 0.9);
+             --card-bg-blue: rgba(255, 255, 255, 0.1);
             --text-primary-light: #2c3e50;
             --text-primary-dark: #ffffff;
+            --text-primary-blue: #ffffff;
             --text-secondary-light: #7f8c8d;
             --text-secondary-dark: #a0a0a0;
+            --text-secondary-blue: #ecf0f1;
         }
 
         body {
@@ -39,6 +43,12 @@
             background: var(--bg-gradient-dark);
             color: var(--text-primary-dark);
         }
+
+        body.blue-theme {
+            background: var(--bg-gradient-blue);
+            color: var(--text-primary-blue);
+        }
+
 
         .container {
             max-width: 1200px;
@@ -60,19 +70,31 @@
             border-radius: 5px;
             cursor: pointer;
             font-weight: bold;
-            background: rgba(255, 255, 255, 0.9);
-            color: #2c3e50;
-            transition: all 0.3s ease;
+             transition: all 0.3s ease;
+        }
+        
+        .light-theme .control-btn {
+          background: rgba(255, 255, 255, 0.9);
+          color: #2c3e50;
         }
 
         .dark-theme .control-btn {
-            background: rgba(30, 30, 30, 0.9);
-            color: #ffffff;
+          background: rgba(30, 30, 30, 0.9);
+          color: #ffffff;
         }
+        
+        .blue-theme .control-btn {
+         background: rgba(255, 255, 255, 0.1);          color: #ffffff;
+        }
+
 
         .control-btn:hover {
             transform: translateY(-2px);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .control-btn.transition {
+            transition: background-color 0.3s, color 0.3s;
         }
 
         header {
@@ -82,13 +104,16 @@
             border-radius: 15px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-
-        .light-theme header {
+        
+         .light-theme header {
             background: var(--card-bg-light);
         }
 
         .dark-theme header {
             background: var(--card-bg-dark);
+        }
+         .blue-theme header {
+            background: var(--card-bg-blue);
         }
 
         h1 {
@@ -120,6 +145,9 @@
         .dark-theme .card {
             background: var(--card-bg-dark);
         }
+         .blue-theme .card {
+             background: var(--card-bg-blue);
+         }
 
         .card:hover {
             transform: translateY(-5px);
@@ -146,6 +174,10 @@
         .dark-theme .card a {
             color: #5dade2;
         }
+        
+        .blue-theme .card a {
+             color: #ecf0f1;
+        }
 
         .card a:hover {
             color: #2980b9;
@@ -158,14 +190,18 @@
         .advantages ul {
             list-style-position: inside;
         }
-
-        .light-theme .advantages ul {
+                 .light-theme .advantages ul {
             color: var(--text-secondary-light);
         }
 
         .dark-theme .advantages ul {
             color: var(--text-secondary-dark);
         }
+        
+         .blue-theme .advantages ul {
+           color: var(--text-secondary-blue);
+         }
+
 
         .advantages li {
             margin-bottom: 0.5rem;
@@ -198,73 +234,73 @@
 </head>
 <body class="light-theme">
     <div class="controls">
-        <button class="control-btn" onclick="toggleLanguage()" id="langToggle">EN</button>
-        <button class="control-btn" onclick="toggleTheme()" id="themeToggle">馃寵</button>
+        <button class="control-btn transition" onclick="toggleLanguage()" id="langToggle">RU</button>
+        <button class="control-btn transition" onclick="toggleTheme()" id="themeToggle">☀️</button>
     </div>
 
     <div class="container">
         <header>
-            <h1>袦邪褉泻 袚褍屑薪懈褑泻懈泄 小械褉谐械械胁懈褔</h1>
-            <h2 class="catalog-title">袣邪褌邪谢芯谐 褋芯胁褉械屑械薪薪褘褏 袠袠-懈薪褋褌褉褍屑械薪褌芯胁</h2>
+            <h1 data-key="pageTitle">Каталог инструментов на базе ИИ</h1>
+            <h2 class="catalog-title" data-key="catalogTitle">Современные ИИ-инструменты</h2>
         </header>
 
         <div class="grid">
             <div class="card">
-                <span class="category" data-ru="袚械薪械褉邪褑懈褟 褌械泻褋褌邪" data-en="Text Generation">袚械薪械褉邪褑懈褟 褌械泻褋褌邪</span>
-                <img src="https://1000logos.net/wp-content/uploads/2023/02/ChatGPT-Logo.png" alt="ChatGPT">
-                <h3>ChatGPT</h3>
-                <a href="https://chat.openai.com" target="_blank" data-ru="袨褌泻褉褘褌褜 褋邪泄褌 鈫�" data-en="Open website 鈫�">袨褌泻褉褘褌褜 褋邪泄褌 鈫�</a>
+                <span class="category" data-key="categoryTextGeneration">Генерация текста</span>
+                <img src="https://freelogopng.com/images/all_img/1681038242chatgpt-logo-png.png" alt="Логотип Chat">
+                <h3 data-key="toolNameChat">ChatGPT</h3>
+                <a href="https://chat.openai.com" target="_blank" data-key="linkOpenSite">Открыть сайт ➔</a>
                 <div class="advantages">
                     <ul>
-                        <li data-ru="袩褉芯写胁懈薪褍褌邪褟 谐械薪械褉邪褑懈褟 褌械泻褋褌邪" data-en="Advanced text generation">袩褉芯写胁懈薪褍褌邪褟 谐械薪械褉邪褑懈褟 褌械泻褋褌邪</li>
-                        <li data-ru="袦褍谢褜褌懈褟蟹褘褔薪邪褟 锌芯写写械褉卸泻邪" data-en="Multilingual support">袦褍谢褜褌懈褟蟹褘褔薪邪褟 锌芯写写械褉卸泻邪</li>
-                        <li data-ru="袣芯薪褌械泻褋褌薪芯械 芯斜褖械薪懈械" data-en="Contextual communication">袣芯薪褌械泻褋褌薪芯械 芯斜褖械薪懈械</li>
-                        <li data-ru="袩芯屑芯褖褜 胁 薪邪锌懈褋邪薪懈懈 泻芯写邪" data-en="Code writing assistance">袩芯屑芯褖褜 胁 薪邪锌懈褋邪薪懈懈 泻芯写邪</li>
+                        <li data-key="advantageChat1">Продвинутая генерация текста</li>
+                        <li data-key="advantageChat2">Многоязычная поддержка</li>
+                        <li data-key="advantageChat3">Контекстное общение</li>
+                        <li data-key="advantageChat4">Помощь в написании кода</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <span class="category" data-ru="小芯蟹写邪薪懈械 懈蟹芯斜褉邪卸械薪懈泄" data-en="Image Creation">小芯蟹写邪薪懈械 懈蟹芯斜褉邪卸械薪懈泄</span>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/04/ChatGPT_logo.svg/1024px-ChatGPT_logo.svg.png" alt="Midjourney">
-                <h3>Midjourney</h3>
-                <a href="https://www.midjourney.com" target="_blank" data-ru="袨褌泻褉褘褌褜 褋邪泄褌 鈫�" data-en="Open website 鈫�">袨褌泻褉褘褌褜 褋邪泄褌 鈫�</a>
+                <span class="category" data-key="categoryImageCreation">Создание изображений</span>
+                <img src="https://avatars.mds.yandex.net/i?id=12e345c2e2998f73f32feb4f1e3a8727_l-10556007-images-thumbs&n=33&w=1080&h=1080" alt="Логотип Midjourney">
+                <h3 data-key="toolNameMidjourney">Midjourney</h3>
+                <a href="https://www.midjourney.com" target="_blank" data-key="linkOpenSite">Открыть сайт ➔</a>
                 <div class="advantages">
                     <ul>
-                        <li data-ru="袪械邪谢懈褋褌懈褔薪褘械 懈蟹芯斜褉邪卸械薪懈褟" data-en="Realistic images">袪械邪谢懈褋褌懈褔薪褘械 懈蟹芯斜褉邪卸械薪懈褟</li>
-                        <li data-ru="校薪懈泻邪谢褜薪褘泄 褋褌懈谢褜" data-en="Unique style">校薪懈泻邪谢褜薪褘泄 褋褌懈谢褜</li>
-                        <li data-ru="袠薪褌褍懈褌懈胁薪褘泄 懈薪褌械褉褎械泄褋" data-en="Intuitive interface">袠薪褌褍懈褌懈胁薪褘泄 懈薪褌械褉褎械泄褋</li>
-                        <li data-ru="袘褘褋褌褉邪褟 芯斜褉邪斜芯褌泻邪" data-en="Fast processing">袘褘褋褌褉邪褟 芯斜褉邪斜芯褌泻邪</li>
+                        <li data-key="advantageMidjourney1">Реалистичные изображения</li>
+                        <li data-key="advantageMidjourney2">Уникальный стиль</li>
+                        <li data-key="advantageMidjourney3">Интуитивный интерфейс</li>
+                        <li data-key="advantageMidjourney4">Быстрая обработка</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <span class="category" data-ru="袨斜褉邪斜芯褌泻邪 胁懈写械芯" data-en="Video Processing">袨斜褉邪斜芯褌泻邪 胁懈写械芯</span>
-                <img src="https://digiseller.mycdn.ink/preview/218823/p1_4134871_3bd253a4.png" alt="Runway">
-                <h3>Runway</h3>
-                <a href="https://runway.ml" target="_blank" data-ru="袨褌泻褉褘褌褜 褋邪泄褌 鈫�" data-en="Open website 鈫�">袨褌泻褉褘褌褜 褋邪泄褌 鈫�</a>
+                <span class="category" data-key="categoryVideoProcessing">Обработка видео</span>
+                <img src="https://digiseller.mycdn.ink/preview/218823/p1_4134871_3bd253a4.png" alt="Логотип Runway">
+                <h3 data-key="toolNameRunway">Runway</h3>
+                <a href="https://runway.ml" target="_blank" data-key="linkOpenSite">Открыть сайт ➔</a>
                 <div class="advantages">
                     <ul>
-                        <li data-ru="袠袠-屑芯薪褌邪卸 胁懈写械芯" data-en="AI video editing">袠袠-屑芯薪褌邪卸 胁懈写械芯</li>
-                        <li data-ru="小锌械褑褝褎褎械泻褌褘" data-en="Special effects">小锌械褑褝褎褎械泻褌褘</li>
-                        <li data-ru="袚械薪械褉邪褑懈褟 胁懈写械芯" data-en="Video generation">袚械薪械褉邪褑懈褟 胁懈写械芯</li>
-                        <li data-ru="校屑薪芯械 褉械写邪泻褌懈褉芯胁邪薪懈械" data-en="Smart editing">校屑薪芯械 褉械写邪泻褌懈褉芯胁邪薪懈械</li>
+                        <li data-key="advantageRunway1">ИИ-монтаж видео</li>
+                        <li data-key="advantageRunway2">Спецэффекты</li>
+                        <li data-key="advantageRunway3">Генерация видео</li>
+                        <li data-key="advantageRunway4">Умное редактирование</li>
                     </ul>
                 </div>
             </div>
 
             <div class="card">
-                <span class="category" data-ru="袪邪蟹褉邪斜芯褌泻邪" data-en="Development">袪邪蟹褉邪斜芯褌泻邪</span>
-                <img src="https://edgestatic.azureedge.net/shared/cms/lrs1c69a1j/logos/9759dc3bced042989f176efa44fc0fa0.png" alt="GitHub Copilot">
-                <h3>GitHub Copilot</h3>
-                <a href="https://github.com/features/copilot" target="_blank" data-ru="袨褌泻褉褘褌褜 褋邪泄褌 鈫�" data-en="Open website">袨褌泻褉褘褌褜 褋邪泄褌 鈫�</a>
-                <div class="advantages">
+                <span class="category" data-key="categoryDevelopment">Разработка</span>
+                <img src="https://edgestatic.azureedge.net/shared/cms/lrs1c69a1j/logos/9759dc3bced042989f176efa44fc0fa0.png" alt="Логотип GitHub Copilot">
+                <h3 data-key="toolNameCopilot">GitHub Copilot</h3>
+                <a href="https://github.com/features/copilot" target="_blank" data-key="linkOpenSite">Открыть сайт ➔</a>
+                 <div class="advantages">
                     <ul>
-                        <li data-ru="袠袠-邪胁褌芯写芯锌芯谢薪械薪懈械 泻芯写邪" data-en="AI code completion">袠袠-邪胁褌芯写芯锌芯谢薪械薪懈械 泻芯写邪</li>
-                        <li data-ru="袩芯写写械褉卸泻邪 胁褋械褏 褟蟹褘泻芯胁" data-en="All languages support">袩芯写写械褉卸泻邪 胁褋械褏 褟蟹褘泻芯胁</li>
-                        <li data-ru="袙褋褌褉芯械薪 胁 锌芯锌褍谢褟褉薪褘械 IDE" data-en="Integrated with popular IDEs">袙褋褌褉芯械薪 胁 锌芯锌褍谢褟褉薪褘械 IDE</li>
-                        <li data-ru="袛芯泻褍屑械薪褌懈褉芯胁邪薪懈械 泻芯写邪" data-en="Code documentation">袛芯泻褍屑械薪褌懈褉芯胁邪薪懈械 泻芯写邪</li>
+                        <li data-key="advantageCopilot1">ИИ-автодополнение кода</li>
+                        <li data-key="advantageCopilot2">Поддержка всех языков</li>
+                        <li data-key="advantageCopilot3">Интеграция с популярными IDE</li>
+                        <li data-key="advantageCopilot4">Документация кода</li>
                     </ul>
                 </div>
             </div>
@@ -272,32 +308,149 @@
     </div>
 
     <script>
-        let isRussian = true;
-        let isDark = false;
+       let currentLanguage = 'ru';
+        let currentTheme = 'light-theme';
 
-        function toggleLanguage() {
-            isRussian = !isRussian;
-            const langBtn = document.getElementById('langToggle');
-            langBtn.textContent = isRussian ? 'EN' : 'RU';
+        const themes = ['light-theme', 'dark-theme', 'blue-theme'];
 
-            // Update catalog title
-            document.querySelector('.catalog-title').textContent = isRussian 
-                ? '袣邪褌邪谢芯谐 褋芯胁褉械屑械薪薪褘褏 袠袠-懈薪褋褌褉褍屑械薪褌芯胁'
-                : 'Catalog of Modern AI Tools';
 
-            // Update all elements with data-ru and data-en attributes
-            document.querySelectorAll('[data-ru][data-en]').forEach(element => {
-                element.textContent = isRussian ? element.dataset.ru : element.dataset.en;
+        const translations = {en: {
+               pageTitle: "Catalog of AI Tools",
+               catalogTitle: "Modern AI Tools",
+               categoryTextGeneration: "Text Generation",
+               toolNameChat: "Chat",
+               linkOpenSite: "Open website ➔",
+                advantageChat1: "Advanced text generation",
+               advantageChat2: "Multilingual support",
+               advantageChat3: "Contextual communication",
+                advantageChat4: "Code writing assistance",
+               categoryImageCreation: "Image Creation",
+                toolNameMidjourney: "Midjourney",
+                advantageMidjourney1: "Realistic images",
+                advantageMidjourney2: "Unique style",
+                advantageMidjourney3: "Intuitive interface",
+                advantageMidjourney4: "Fast processing",
+                categoryVideoProcessing: "Video Processing",
+                toolNameRunway: "Runway",
+                advantageRunway1: "AI video editing",
+                advantageRunway2: "Special effects",
+                advantageRunway3: "Video generation",
+                advantageRunway4: "Smart editing",
+               categoryDevelopment: "Development",
+                toolNameCopilot: "GitHub Copilot",
+                advantageCopilot1: "AI code completion",
+                advantageCopilot2: "All languages support",
+                advantageCopilot3: "Integrated with popular IDEs",
+                advantageCopilot4: "Code documentation",
+            },
+            ru: {
+                pageTitle: "Каталог инструментов на базе ИИ",
+                catalogTitle: "Современные ИИ-инструменты",
+                categoryTextGeneration: "Генерация текста",
+                toolNameChat: "Chat",
+                linkOpenSite: "Открыть сайт ➔",
+               advantageChat1: "Продвинутая генерация текста",
+                advantageChat2: "Многоязычная поддержка",
+                advantageChat3: "Контекстное общение",
+                advantageChat4: "Помощь в написании кода",
+                categoryImageCreation: "Создание изображений",
+                toolNameMidjourney: "Midjourney",
+                advantageMidjourney1: "Реалистичные изображения",
+               advantageMidjourney2: "Уникальный стиль",
+               advantageMidjourney3: "Интуитивный интерфейс",
+               advantageMidjourney4: "Быстрая обработка",
+               categoryVideoProcessing: "Обработка видео",
+                toolNameRunway: "Runway",
+               advantageRunway1: "ИИ-монтаж видео",
+               advantageRunway2: "Спецэффекты",
+               advantageRunway3: "Генерация видео",
+                advantageRunway4: "Умное редактирование",
+                categoryDevelopment: "Разработка",
+                toolNameCopilot: "GitHub Copilot",
+                advantageCopilot1: "ИИ-автодополнение кода",
+                advantageCopilot2: "Поддержка всех языков",
+                advantageCopilot3: "Интеграция с популярными IDE",
+                advantageCopilot4: "Документация кода",
+            },
+            es: {
+                pageTitle: "Catálogo de Herramientas de IA",
+                catalogTitle: "Herramientas de IA Modernas",
+                categoryTextGeneration: "Generación de Texto",
+                toolNameChat: "Chat",
+                 linkOpenSite: "Abrir sitio web ➔",
+                advantageChat1: "Generación de texto avanzada",
+                advantageChat2: "Soporte multilingüe",
+                advantageChat3: "Comunicación contextual",
+                advantageChat4: "Asistencia para la escritura de código",
+                 categoryImageCreation: "Creación de Imágenes",
+                toolNameMidjourney: "Midjourney",
+                advantageMidjourney1: "Imágenes realistas",
+                advantageMidjourney2: "Estilo único",
+                advantageMidjourney3: "Interfaz intuitiva",
+                advantageMidjourney4: "Procesamiento rápido",
+                 categoryVideoProcessing: "Procesamiento de Video",
+                toolNameRunway: "Runway",
+                advantageRunway1: "Edición devideo con IA",
+                advantageRunway2: "Efectos especiales",
+                advantageRunway3: "Generación de video",
+                advantageRunway4: "Edición inteligente",
+                categoryDevelopment: "Desarrollo",
+                toolNameCopilot: "GitHub Copilot",
+                advantageCopilot1: "Autocompletado de código con IA",
+                advantageCopilot2: "Soporte para todos los lenguajes",
+                advantageCopilot3: "Integración con IDEs populares",
+                advantageCopilot4: "Documentación de código",
+            }
+
+        }
+        
+          function updateContent() {
+              document.querySelectorAll('[data-key]').forEach(element => {
+                 const key = element.dataset.key;
+                element.textContent = translations[currentLanguage][key];
             });
         }
 
-        function toggleTheme() {
-            isDark = !isDark;
-            const themeBtn = document.getElementById('themeToggle');
-            document.body.classList.toggle('dark-theme');
-            document.body.classList.toggle('light-theme');
-            themeBtn.textContent = isDark ? '鈽�锔�' : '馃寵';
+        function toggleLanguage() {
+            const languages = Object.keys(translations);
+            const currentIndex = languages.indexOf(currentLanguage);
+            currentLanguage = languages[(currentIndex + 1) % languages.length];
+             const langBtn = document.getElementById('langToggle');
+             langBtn.textContent = currentLanguage.toUpperCase();
+            updateContent();
+            localStorage.setItem('language', currentLanguage);
         }
+
+       function toggleTheme() {
+           const currentIndex = themes.indexOf(currentTheme);
+           currentTheme = themes[(currentIndex + 1) % themes.length];
+           document.body.classList.remove(...themes);
+           document.body.classList.add(currentTheme);
+            const themeBtn = document.getElementById('themeToggle');
+             themeBtn.textContent = currentTheme === 'dark-theme' ? '🌙' : currentTheme === 'blue-theme' ? '🔷' : '☀️';
+             localStorage.setItem('theme', currentTheme);
+        }
+        
+          function loadSettings() {
+             const storedLanguage = localStorage.getItem('language');
+              const storedTheme = localStorage.getItem('theme');
+              if(storedLanguage) {
+                currentLanguage = storedLanguage;
+                document.getElementById('langToggle').textContent = currentLanguage.toUpperCase();
+                updateContent();
+               }
+
+              if(storedTheme) {
+                 currentTheme = storedTheme;
+                document.body.classList.remove(...themes);
+                document.body.classList.add(currentTheme);
+                 const themeBtn = document.getElementById('themeToggle');
+               themeBtn.textContent = currentTheme === 'dark-theme' ? '🌙' : currentTheme === 'blue-theme' ? '🔷' : '☀️';
+              }
+
+          }
+
+        loadSettings();
     </script>
 </body>
-                          </html>
+</html>
