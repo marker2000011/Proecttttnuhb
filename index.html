@@ -84,6 +84,7 @@
         }
         
         .blue-theme .control-btn {
+
          background: rgba(255, 255, 255, 0.1);          color: #ffffff;
         }
 
@@ -234,14 +235,16 @@
 </head>
 <body class="light-theme">
     <div class="controls">
-        <button class="control-btn transition" onclick="toggleLanguage()" id="langToggle">RU</button>
-        <button class="control-btn transition" onclick="toggleTheme()" id="themeToggle">☀️</button>
+        <button class="control-btn transition" onclick="toggleLanguage()" id="langToggle" aria-label="Toggle Language">RU</button>
+        <button class="control-btn transition" onclick="toggleTheme()" id="themeToggle" aria-label="Toggle Theme">☀️</button>
     </div>
 
     <div class="container">
         <header>
             <h1 data-key="pageTitle">Каталог инструментов на базе ИИ</h1>
-            <h2 class="catalog-title" data-key="catalogTitle">Современные ИИ-инструменты</h2>
+            <h2 class="catalog-title" data-key="catalogTitle"
+
+>Современные ИИ-инструменты</h2>
         </header>
 
         <div class="grid">
@@ -262,7 +265,7 @@
 
             <div class="card">
                 <span class="category" data-key="categoryImageCreation">Создание изображений</span>
-                <img src="https://avatars.mds.yandex.net/i?id=12e345c2e2998f73f32feb4f1e3a8727_l-10556007-images-thumbs&n=33&w=1080&h=1080" alt="Логотип Midjourney">
+                <img src="https://235086350-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F6Bl9seaj2HHrtdPiMKPI%2Ficon%2FZsAR24JQyZWqom2XGgji%2Funknown-7.png?alt=media&token=def5d2e9-0c43-46cc-b5cb-bf2cb626f3d9" alt="Логотип Midjourney">
                 <h3 data-key="toolNameMidjourney">Midjourney</h3>
                 <a href="https://www.midjourney.com" target="_blank" data-key="linkOpenSite">Открыть сайт ➔</a>
                 <div class="advantages">
@@ -277,7 +280,7 @@
 
             <div class="card">
                 <span class="category" data-key="categoryVideoProcessing">Обработка видео</span>
-                <img src="https://digiseller.mycdn.ink/preview/218823/p1_4134871_3bd253a4.png" alt="Логотип Runway">
+                <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65b0af9ad021d969f482bc33_65b0b29741ab4206df6b7dbc/scale_1200" alt="Логотип Runway">
                 <h3 data-key="toolNameRunway">Runway</h3>
                 <a href="https://runway.ml" target="_blank" data-key="linkOpenSite">Открыть сайт ➔</a>
                 <div class="advantages">
@@ -292,7 +295,7 @@
 
             <div class="card">
                 <span class="category" data-key="categoryDevelopment">Разработка</span>
-                <img src="https://edgestatic.azureedge.net/shared/cms/lrs1c69a1j/logos/9759dc3bced042989f176efa44fc0fa0.png" alt="Логотип GitHub Copilot">
+                <img src="https://play-lh.googleusercontent.com/nP2a6TMB-96l-qVzKuJ1I9rXsFATyw7pCM-ZVvnUuZqA3Q2kuPUitqOxG9Q8moSOijlz" alt="Логотип GitHub Copilot">
                 <h3 data-key="toolNameCopilot">GitHub Copilot</h3>
                 <a href="https://github.com/features/copilot" target="_blank" data-key="linkOpenSite">Открыть сайт ➔</a>
                  <div class="advantages">
@@ -304,8 +307,68 @@
                     </ul>
                 </div>
             </div>
+            
+             <div class="card">
+        <span class="category" >Обработка естественног
+
+о языка</span>
+        <img src="https://www.alexfill.ru/i/news_industry/469-b.jpg" alt="Логотип Google Cloud Natural Language">
+        <h3>Google Cloud Natural Language</h3>
+        <a href="https://cloud.google.com/natural-language" target="_blank">Открыть сайт ➔</a>
+        <div class="advantages">
+            <ul>
+                <li>Анализ текста</li>
+                <li>Идентификация сущностей</li>
+                <li>Определение настроений</li>
+            </ul>
         </div>
     </div>
+    
+    <div class="card">
+        <span class="category">Анализ данных</span>
+        <img src="https://www.itnews.com.au/images/events/190820141548datarobot-promo-logo-stacked-color-big.jpg" alt="Логотип DataRobot">
+        <h3>DataRobot</h3>
+        <a href="https://www.datarobot.com" target="_blank">Открыть сайт ➔</a>
+        <div class="advantages">
+            <ul>
+                <li>Автоматизированное машинное обучение</li>
+                <li>Предсказательная аналитика</li>
+                <li>Интуитивный интерфейс</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="category">Робототехника</span>
+        <img src="https://avatars.mds.yandex.net/i?id=90f30299b68caca91b86e060a81da8e6_l-10229772-images-thumbs&n=13" alt="Логотип OpenAI Robotics">
+        <h3>OpenAI Robotics</h3>
+        <a href="https://openai.com/research/robotics" target="_blank">Открыть сайт ➔</a>
+        <div class="advantages">
+            <ul>
+                <li>Обучение с подкреплением</li>
+                <li>Адаптивные алгоритмы</li>
+                <li>Интерактивные среды</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <span class="category">Распознавание изображений</span>
+        <img src="https://s3.amazonaws.com/listiqle/google-cloud-vision.jpg" alt="Логотип Google Vision AI">
+        <h3>Google Vision AI</h3>
+        <a href="https://cloud.google.com/vision" target="_blank">Открыть сайт ➔</a>
+        <div class="advantages">
+            <ul>
+                <li>Распознавание объектов</li>
+                <li>Чтение текста (OCR)</li>
+                <li>Определение меток и свойств изображений</li>
+            </ul>
+        </div>
+    </div>
+
+        </div>
+    </div>
+
 
     <script>
        let currentLanguage = 'ru';
@@ -342,7 +405,9 @@
                 advantageCopilot2: "All languages support",
                 advantageCopilot3: "Integrated with popular IDEs",
                 advantageCopilot4: "Code documentation",
-            },
+            }
+
+,
             ru: {
                 pageTitle: "Каталог инструментов на базе ИИ",
                 catalogTitle: "Современные ИИ-инструменты",
@@ -422,7 +487,9 @@
         }
 
        function toggleTheme() {
-           const currentIndex = themes.indexOf(currentTheme);
+           const currentIndex = themes.indexOf(current
+
+Theme);
            currentTheme = themes[(currentIndex + 1) % themes.length];
            document.body.classList.remove(...themes);
            document.body.classList.add(currentTheme);
